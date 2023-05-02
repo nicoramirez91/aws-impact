@@ -1,4 +1,4 @@
-import { useEffect } from 'react';    
+import { useEffect, useState } from 'react';    
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper";
@@ -9,7 +9,32 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function Soluciones() {
+    const [province, setProvince] = useState('');
 
+  
+    useEffect(() => {
+      // Obtener la posición actual del usuario
+      navigator.geolocation.getCurrentPosition(success, error);
+  
+      function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+  
+        // Utilizar la API de OpenStreetMap para obtener la dirección actual
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
+          .then(response => response.json())
+          .then(data => {
+            const province = data.address.state;
+            setProvince(province);
+
+          })
+          .catch(error => console.error(error));
+      }
+  
+      function error(error) {
+        console.error(error);
+      }
+    }, []);
 
 
   return (
@@ -20,7 +45,7 @@ export default function Soluciones() {
                 <span>Soluciones</span> donde estes:
             </div>
             <div className="soluciones__container-provincia">
-                <i className="fa-solid fa-location-dot"></i> San Luis, Argentina
+                <i className="fa-solid fa-location-dot"></i> {province}, Argentina
             </div>
             <div className="soluciones__container--content">
                 <Swiper

@@ -517,7 +517,6 @@
 }
 .provincia .grid .map {
   position: absolute;
-  background-image: url("/images/San Luis.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

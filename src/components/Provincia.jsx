@@ -2,36 +2,54 @@ import { useState, useEffect } from 'react';
 
 
 export default function Provincia() {
-    // Obtener la posición actual del usuario
-    navigator.geolocation.getCurrentPosition(success, error);
+    const [province, setProvince] = useState('');
+    const [mapStyle, setMapStyle] = useState(null);
+  
+    useEffect(() => {
+      // Obtener la posición actual del usuario
+      navigator.geolocation.getCurrentPosition(success, error);
+  
+      function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+  
+        // Utilizar la API de OpenStreetMap para obtener la dirección actual
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
+          .then(response => response.json())
+          .then(data => {
+            const province = data.address.state;
+            setProvince(province);
 
-    function success(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+          })
+          .catch(error => console.error(error));
+      }
+  
+      function error(error) {
+        console.error(error);
+      }
+    }, []);
 
-    // Utilizar la API de OpenStreetMap para obtener la dirección actual
-    fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
-        .then(response => response.json())
-        .then(data => {
-        const province = data.address.state;
-        console.log(`Te encuentras en la provincia de ${province}`);
-        })
-        .catch(error => console.error(error));
-    }
-
-    function error(error) {
-    console.error(error);
-    }
-
+    useEffect(() => {
+        if (province) {
+          setMapStyle({
+            background: `url('/images/${province}.png')`,
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          });
+        }
+      }, [province]);
       
+      console.log(mapStyle)
   return (
     <>
     <div className="provincia" >
       <div className="grid">
             <div className="title">
-                SAN LUIS
+                {province}
+
             </div>
-            <div className="map">
+            <div className="map" style={mapStyle}>
 
             </div>
             <div className="grid-item top1">
