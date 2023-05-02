@@ -571,7 +571,7 @@
 }
 
 body {
-  background-color: #1C2C43;
+  background: #1C2C43 !important;
 }
 body footer {
   margin-top: 150px;
