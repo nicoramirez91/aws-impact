@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-
     "@popperjs/core": "^2.11.7",
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",
@@ -20,5 +19,17 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "vite": "^4.2.0"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoramirez91/aws-impact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicoramirez91/aws-impact/issues"
+  },
+  "homepage": "https://github.com/nicoramirez91/aws-impact#readme",
+  "description": ""
 }
