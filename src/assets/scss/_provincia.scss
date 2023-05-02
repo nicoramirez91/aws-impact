@@ -3,6 +3,8 @@
     background: url('/images/mapa 1.png');
     background-size: cover;
     height: 700px;
+    position: relative;
+    z-index: -1;
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -162,10 +164,10 @@
                 width: 121px;
                 height: 85px;
                 padding: 2rem;
-                background: linear-gradient(90deg, rgba(74,0,121,1) 0%, rgba(255,136,8,1) 100%, rgba(255,8,113,1) 100%);
+                background: linear-gradient(90deg, rgba(255,136,8,1) 0%, rgba(255,8,113,1) 100%, rgba(255,8,113,1) 100%);
                 z-index: -1;
                 border-radius: 15px;
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
             &.principal {
                 background: linear-gradient(0deg, rgba(255,136,8,1) 0%, rgba(255,8,113,1) 100%);

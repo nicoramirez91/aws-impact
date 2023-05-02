@@ -395,6 +395,8 @@
   background: url("/images/mapa 1.png");
   background-size: cover;
   height: 700px;
+  position: relative;
+  z-index: -1;
 }
 .provincia .grid {
   display: grid;
@@ -544,10 +546,10 @@
   width: 121px;
   height: 85px;
   padding: 2rem;
-  background: linear-gradient(90deg, rgb(74, 0, 121) 0%, rgb(255, 136, 8) 100%, rgb(255, 8, 113) 100%);
+  background: linear-gradient(90deg, rgb(255, 136, 8) 0%, rgb(255, 8, 113) 100%, rgb(255, 8, 113) 100%);
   z-index: -1;
   border-radius: 15px;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .provincia .grid .box.principal {
   background: linear-gradient(0deg, rgb(255, 136, 8) 0%, rgb(255, 8, 113) 100%);
