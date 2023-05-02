@@ -1,0 +1,42 @@
+@import 'header';
+@import 'impacta';
+@import 'soluciones';
+@import 'encuentra';
+@import 'contacto';
+@import 'provincia';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1C2C43;
+
+    footer {
+        margin-top: 150px;
+        .footer__container {
+            display: flex;
+            justify-content: end;
+        }
+    }
+    .btn__contacto {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        border-radius: 50%;
+        background: linear-gradient(0deg, rgba(255,136,8,1) 0%, rgba(255,8,113,1) 100%, rgba(255,8,113,1) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        z-index: 9999999;
+        i {
+            color: white;
+            font-size: 30px;
+        }
+    }
+}

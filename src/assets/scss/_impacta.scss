@@ -1,0 +1,110 @@
+.impacta {
+    padding-top: 20px;
+    &__container {
+        &--content {
+            position: relative;
+            height: 100vh;
+            .content--title {
+                color: white;
+                font-size: 96px;
+                font-weight: bold;
+                position: absolute;
+                top: 40%;
+                left: 15%;
+                z-index: 20;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                line-height: 85px;
+                .vida {
+                    margin-left: -35px;
+                }
+            }
+
+            img {
+                height: 270px;
+                &:nth-of-type(1) {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    z-index: 15;
+                }
+                &:nth-of-type(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 60%;
+                    transform: translateX(-50%);
+                    z-index: 15;
+                }
+                &:nth-of-type(3) {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    z-index: 15;
+                    height: 300px;
+                }
+                &:nth-of-type(4) {
+                    position: absolute;
+                    bottom: 0;
+                    left: 55%;
+                    transform: translateX(-50%);
+                    z-index: 15;
+
+                }
+            }
+            .linea1 {
+                position: absolute;
+                top: 20%;
+                left: 30%;
+                img {
+                    height: 170px;
+                }
+            }
+            .linea2 {
+                position: absolute;
+                bottom: 46%;
+                left: 20%;
+                img {
+                    height: 456px;
+                }
+            }
+        }
+    }
+}
+.transformar {
+    padding-top: 150px;
+    overflow: hidden;
+    &__container {
+        &--content {
+            border: 5px solid;
+            border-image-source: linear-gradient(to right, #FF8808, #FF0871);
+            border-image-slice: 1;
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            z-index: 10;
+            
+            span {
+                color: #FF8808;
+            }
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 5px solid;
+                border-image-source: linear-gradient(to right, #FF8808, #FF0871);
+                border-image-slice: 1;
+                left: 30px;
+                top: -30px;
+                z-index: -1;
+                background-clip: padding-box;
+            }
+        }
+    }
+}
