@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.7",
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",
     "swiper": "^9.2.4"
