@@ -5,6 +5,7 @@
     height: 700px;
     position: relative;
     z-index: -1;
+    overflow: hidden;
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;

@@ -397,6 +397,7 @@
   height: 700px;
   position: relative;
   z-index: -1;
+  overflow: hidden;
 }
 .provincia .grid {
   display: grid;
