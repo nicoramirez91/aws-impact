@@ -1,6 +1,10 @@
 import React from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Encuentra() {
+
+    AOS.init();
   return (
     <>
     <div className="encuentra">
@@ -16,13 +20,19 @@ export default function Encuentra() {
                 </select>
             </div>
             <div className="encuentra__container--partners">
-                <div className="partner">
-                    <img src="/images/Smartmation04.png" alt="Smartmation" />
+                <div className="partner" data-aos="flip-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+                    <img src="/images/Smartmation04.png" alt="Smartmation"  />
                 </div>
-                <div className="partner">
-                    <img src="/images/grupo tx 2.png" alt="grupo tx 2" />
+                <div className="partner" data-aos="flip-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+                    <img src="/images/grupo tx 2.png" alt="grupo tx 2"  />
                 </div>
-                <div className="partner">
+                <div className="partner" data-aos="flip-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" >
                     <img src="/images/Logo meetcard.png" alt="Logo meetcard" />
                 </div>
             </div>
