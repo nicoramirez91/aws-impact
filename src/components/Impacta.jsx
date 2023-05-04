@@ -1,13 +1,15 @@
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Impacta() {
+    AOS.init();
   return (
     <>
     <div className="impacta">
         <div className="impacta__container container">
             <div className="impacta__container--content">
                 <div className="content--title">
-                    <div className="impacta-text">
+                    <div className="impacta-text" >
                         Impacta
                     </div>
                     <div className="vida">
@@ -21,10 +23,10 @@ export default function Impacta() {
                     <img src="/images/linea2.png" alt="" />
                 </div>
                 <div className="linea2"></div>
-                <img src="/images/impacta1.png" alt="Impacta Vidas" />
-                <img src="/images/impacta2.png" alt="Impacta Vidas" />
-                <img src="/images/impacta3.png" alt="Impacta Vidas" />
-                <img src="/images/impacta4.png" alt="Impacta Vidas" />
+                <img src="/images/impacta1.png" alt="Impacta Vidas"   />
+                <img src="/images/impacta2.png" alt="Impacta Vidas"  />
+                <img src="/images/impacta3.png" alt="Impacta Vidas"  />
+                <img src="/images/impacta4.png" alt="Impacta Vidas"  />
             </div>
         </div>
     </div>

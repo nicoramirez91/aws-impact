@@ -519,9 +519,9 @@
 }
 .provincia .grid .map {
   position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   padding-top: 20rem;
   width: 100%;
   height: 70%;
@@ -563,6 +563,11 @@
 }
 .provincia .grid .box.principal::before {
   display: none;
+}
+
+.box__container {
+  width: 100%;
+  height: 100%;
 }
 
 * {

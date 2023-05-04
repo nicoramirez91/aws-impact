@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Provincia() {
     const [province, setProvince] = useState('');
-    const [mapStyle, setMapStyle] = useState(null);
+    const [mapStyle, setMapStyle] = useState({
+        background: `url('/images/.png')`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
+      });
   
     useEffect(() => {
       // Obtener la posición actual del usuario
@@ -33,19 +40,21 @@ export default function Provincia() {
         if (province) {
           setMapStyle({
             background: `url('/images/${province}.png')`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
+            backgroundSize: 'contain!important',
+            backgroundRepeat: 'no-repeat!important',
+            backgroundPosition: 'center!important'
           });
         }
       }, [province]);
-      
-      console.log(mapStyle)
+
+      AOS.init();
+
   return (
     <>
     <div className="provincia" >
       <div className="grid">
-            <div className="title">
+            <div className="title"  data-aos="fade-up"
+     data-aos-anchor-placement="top-center">
                 {province}
 
             </div>
@@ -53,7 +62,9 @@ export default function Provincia() {
 
             </div>
             <div className="grid-item top1">
-                <div className="box__container">
+                <div className="box__container" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <div className="box box1">
                         Agilidad
                     </div>
@@ -76,7 +87,9 @@ export default function Provincia() {
                 </div>
             </div>
             <div className="grid-item top2">
-                <div className="box__container">
+                <div className="box__container" data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <div className="box box1">
                         Modernización
                     </div>
@@ -96,7 +109,9 @@ export default function Provincia() {
                 </div>
             </div>
             <div className="grid-item bottom1">
-                <div className="box__container">
+                <div className="box__container" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <div className="box box1">
                         Seguridad
                     </div>
@@ -119,7 +134,9 @@ export default function Provincia() {
                 </div>
             </div>
             <div className="grid-item bottom2">
-            <div className="box__container">
+            <div className="box__container" data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <div className="box box1">
                         Optimización
                     </div>
